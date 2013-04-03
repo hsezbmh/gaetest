@@ -1,9 +1,14 @@
-application: remindmebmh
+application: sample-app
 version: 1
 runtime: python27
 api_version: 1
 threadsafe: true
 
 handlers:
+- url: /reg
+  script: models.app
+- url: /reg/.*
+  script: models.app
 - url: /.*
   script: helloworld.app
+
